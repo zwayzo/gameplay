@@ -1,0 +1,22 @@
+<h1>Create Match</h1>
+<form method="post">
+    {% csrf_token %}
+    <label for="player_1">Player 1:</label>
+    <select name="player_1">
+        {% for player in players %}
+            <option value="{{ player.id }}">{{ player.first_name }} {{ player.last_name }}</option>
+        {% endfor %}
+    </select><br>
+
+    <label for="player_2">Player 2:</label>
+    <select name="player_2">
+        {% for player in players %}
+            <option value="{{ player.id }}">{{ player.first_name }} {{ player.last_name }}</option>
+        {% endfor %}
+    </select><br>
+
+    <label for="date">Match Date:</label>
+    <input type="datetime-local" name="date"><br>
+
+    <button type="submit">Create Match</button>
+</form>

@@ -1,0 +1,7 @@
+<h1>Tournaments</h1>
+<ul>
+{% for tournament in tournaments %}
+    {% comment %} <h3><{{ tournament.profil }}/h3> {% endcomment %}
+    <li><a> {{ tournament.won }}</a></li>
+{% endfor %}
+</ul>

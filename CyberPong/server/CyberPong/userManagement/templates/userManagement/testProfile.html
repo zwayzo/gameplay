@@ -1,0 +1,187 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile | CyberPong</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tomorrow&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        /* Change all text to white */
+        body {
+            color: white;
+            background-color: #121212; /* Optional: set a dark background */
+        }
+        
+        .username,
+        .user-tagline,
+        .profile-header h1,
+        .profile-header p,
+        .menu-link,
+        .activity-list li,
+        .profile-gallery img {
+            color: white;
+        }
+        
+        /* For links */
+        a {
+            color: white !important;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #ccc;
+        }
+
+        /* Optional: Styling for header and other sections */
+        .header-area {
+            background-color: #333; /* Dark background for header */
+        }
+
+        .menu-buttons li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .profile-pic {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+
+        .achievement-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="for-blur">
+        <div class="header-area">
+            <div class="logo-container">
+                <img src="{% static 'pics/fontbolt1.png' %}" alt="CyberPong Logo" class="logo">
+            </div>
+            <div class="menu-container">
+                <ul class="menu-buttons">
+                    <li><a class="menu-link">Home</a></li>
+                    <li><a class="menu-link">Settings</a></li>
+                    <li><a class="menu-link">Logout</a></li>
+                    <a href="{% url "logout" %}" class="menu-link">Logout</a>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="profile-header text-center py-5">
+            
+            {% if profile.photo %}
+                <img src="{{ profile.photo.url}}" alt="User Profile Picture" class="profile-pic">                
+            {% else %}
+                <p>No photo available.</p>
+            {% endif %}
+            <div class="col-md-4">
+                <h1> profile:{{profile.user.username}}</h1>
+                <h1> user:{{user.username}}</h1>
+
+            </div>
+        </section>
+
+        <section class="profile-stats text-center py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2>First Name</h2>
+                        <p>profile: {{ profile.user.first_name }}</p>
+                        <p>user: {{ user.first_name }}</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>Last Name</h2>
+                        <p>profile: {{ profile.user.last_name }}</p>
+                        <p>user: {{ user.last_name }}</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>email</h2>
+                        <p>profile: {{ profile.user.email }}</p>
+                        <p>user: {{ user.email }}</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>password</h2>
+                        <p>profile: {{ profile.user.password }}</p>
+                        <p>user: {{ user.password }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-activity py-5">
+            <div class="container">
+                <h2 class="text-center">Recent Activity</h2>
+                <ul class="activity-list">
+                    <li>Won a match against <strong>Player42</strong> in Neon Arena</li>
+                    <li>Unlocked the <em>Cyber Champion</em> badge</li>
+                    <li>Joined the tournament <strong>Night Pong Masters</strong></li>
+                </ul>
+            </div>
+        </section>
+
+        {% comment %} <section class="profile-gallery py-5">
+            <div class="container">
+                <h2 class="text-center">Achievements Gallery</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="{% static 'pics/achievement1.png' %}" alt="Achievement" class="achievement-img">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{% static 'pics/achievement2.png' %}" alt="Achievement" class="achievement-img">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{% static 'pics/achievement3.png' %}" alt="Achievement" class="achievement-img">
+                    </div>
+                </div>
+            </div>
+        </section> {% endcomment %}
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% if profile.authenticated_with  == 'intra' %}
+                <label for="username">Username:</label>
+                {{ form.username }}
+            {% else %}
+            
+                {% comment %} <label for="email">Email:</label>
+                {{ form.email }} {% endcomment %}
+                
+                {% comment %} <label for="password">Password:</label>
+                {{ form.password }} {% endcomment %}
+                <label for="username">Username:</label>
+                {{ form.username }}
+                
+                <label for="first_name">First Name:</label>
+                {{ form.first_name }}
+                
+                <label for="last_name">Last Name:</label>
+                {{ form.last_name }}
+            {% endif %}
+            <label for="photo">photo:</label>
+            {{ form.photo }}
+            
+            <button type="submit">Submit</button>
+          </form>
+        
+    </main>
+
+    <script src="{% static 'particles.js-master/particles.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>

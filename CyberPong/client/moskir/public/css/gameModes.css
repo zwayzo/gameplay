@@ -1,0 +1,169 @@
+* {
+	font-family: 'Tomorrow', sans-serif;
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* body ,html {
+	width: 100%;
+	height: 100%;
+} */
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* background-color: hwb(0 47% 27%); */
+	/* background: linear-gradient(to right ,#7d6262, #c81936); */
+	/* background-image: url(./pics/4.jpg); */
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	/* filter: blur(2px); */
+	font-family: 'Tomorrow', sans-serif;
+	width: 100%;
+	height: 100%;
+	flex-direction: column;
+	width: 100%;
+}
+
+
+.game-modes-area {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 80%;
+	height: 90%;
+	border: 2px solid yellow;
+	gap: 5%;
+}
+
+.invite-player-area {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 230px;
+	height: 70px;
+	/* border: 2px solid pink; */
+	margin: 30px;
+}
+
+
+
+.join-ai-game-area{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 230px;
+	height: 70px;
+	/* border: 2px solid pink; */
+	margin: 30px;
+}
+
+.join-ai-game-btn , .invite-player-btn, .join-tn-btn{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 220px /*17%*/;
+	height: 60px;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+	border: none;
+	/* margin-right: 40px; */
+	/* font-size: 0.9rem; */
+	/* letter-spacing: 5px; */
+	backdrop-filter: blur(2px);
+	text-transform: uppercase;
+	color: white;
+	background-color:  #ff013cdf !important;
+	clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+}
+
+.tn-area {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 230px;
+	height: 70px;
+	/* border: 2px solid pink; */
+	margin: 30px;
+}
+
+
+
+/* Ensure consistent flex properties for mode cards */
+.mode-card1, .mode-card2, .mode-card3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 25%;
+    height: 90%;
+    background-color: rgba(218, 186, 186, 0.11);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    gap: 80px;
+}
+
+/* Ensure consistent flex properties for mode info sections */
+.mode1-info, .mode2-info, .mode3-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    height: 80%;
+    width: 85%;
+    background-color: rgba(0, 0, 0, 0.045);
+	border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    /* backdrop-filter: blur(20px); */
+}
+
+/* Ensure consistent styling for headings */
+.mode1-info > h1, .mode2-info > h1, .mode3-info > h1 {
+    color: white;
+    padding: 20px;
+    font-size: 3.4rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #ff013c, #ff013c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+	text-align: center;
+	/* white-space: nowrap; Prevent text from wrapping */
+    overflow: hidden;
+}
+
+/* Ensure consistent styling for subheadings */
+.mode1-info > h5, .mode2-info > h5, .mode3-info > h5 {
+    color: white;
+    /* padding: 20px; */
+    font-size: 1.5rem;
+	text-align: center;
+	/* white-space: nowrap; Prevent text from wrapping */
+    overflow: hidden;
+	
+}
+
+/* Ensure consistent styling for invite player area */
+.invite-player-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    height: 70px;
+    margin: 30px;
+}

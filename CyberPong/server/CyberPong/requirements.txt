@@ -1,0 +1,13 @@
+asgiref==3.7.2
+Django==5.0.4
+sqlparse==0.4.4
+psycopg[binary]==3.1.12
+Pillow
+django-allauth
+requests
+pyotp
+djangorestframework
+django-cors-headers
+channels==3.0.4
+redis==4.6.0  # Correct Python client for Redis
+

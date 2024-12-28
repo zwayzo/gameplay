@@ -1,0 +1,194 @@
+POST  http://127.0.0.0:8000/api/register/
+Content-Type: application/json
+
+
+{"username": "yassir", "password":"234", "email": "yassine@gmail.com"}
+
+# yassin 65cc741f4427c31eb65630cd86eab33a2c3fe361
+# moskir b786598a42b7fc2e0e6db8635501d8a10b7dce8a
+# zizo 553e169c68f49578c78a223a472e44bf366f46cf
+# yassir c9c5c9196deaf62a991321b005593587e8d9400a
+###
+
+POST http://127.0.0.0:8000/api/login/
+Content-Type: application/json
+
+{"username": "ylr", "password":"1234"}
+
+
+###
+
+GET http://127.0.0.1:8000/api/logout/
+Content-Type: application/json
+Authorization: Token bd448c2dd89b4d8bd05060da45109be3ff693a03
+
+{}
+
+
+###
+
+GET http://127.0.0.0:8000/api/login_intra/
+Content-Type: application/json
+    
+{}
+
+###
+
+GET http://127.0.0.1:8000/api/profile/
+Authorization: Token 672746e7fa2ea87bc922a835d598c5bf19bdcdcd
+Content-Type: application/json
+
+###
+
+POST http://127.0.0.1:8000/api/profile/
+Authorization: Token 672746e7fa2ea87bc922a835d598c5bf19bdcdcd
+Content-Type: application/json
+
+{
+    "user": {
+        "first_name": "Yassine",
+        "last_name": "Doe",
+        "username": "ylr",
+        "email": "johndoe@example.com",
+        "password": "newpassword123"
+    },
+    "profile": {
+        "authenticated_with": "intra"
+    }
+}
+
+### send a friend request 
+
+POST http://127.0.0.1:8000/friend/friend_request/
+Authorization: Token 3327bffb6e55a5c8308dfc3bea435235520475f7
+Content-Type: application/json
+
+{
+    "receiver_username":"ylr"
+}
+
+
+### remove a friend 
+
+POST http://127.0.0.1:8000/friend/friend_remove/
+Authorization: Token cd90d63490d5182196374ffbc6ef90b3eee8b66d
+Content-Type: application/json
+
+{
+    "receiver_username":"ylr"
+}
+
+
+### Accept a friend request
+
+POST http://127.0.0.1:8000/friend/accept_friend_request/2/
+Authorization: Token 311057e64c76ddd5f38d0dee56822bd6a02b5884
+Content-Type: application/json
+
+
+### decline a friend request
+
+GET  http://127.0.0.1:8000/friend/decline_friend_request/15
+Authorization: Token ad977a8815c378d955aeca45b9d75501ea63111e
+Content-Type: application/json
+
+
+
+### get friens d requests
+GET http://127.0.0.1:8000/friend/get_friend_requests/
+Authorization: Token abe5641b35953e11b10390d4440bcfe907b0b348
+Content-Type: application/json
+
+
+###
+
+POST http://127.0.0.1:8000/game/api/creat_match/
+Authorization: Token c9c5c9196deaf62a991321b005593587e8d9400a
+Content-Type: application/json
+
+{
+    "player1": "moskir",
+    "player2": "yassin"
+}
+
+###
+POST http://127.0.0.1:8000/game/api/end_match/
+Authorization: Token c9c5c9196deaf62a991321b005593587e8d9400a
+Content-Type: application/json
+
+{
+    "id": 1,
+    "score_winner": 23,
+    "score_loser": 2,
+    "winner": "moskir",
+    "loser": "yassin"
+}
+
+
+
+###
+GET http://127.0.0.1:8000/game/api/match_details/1
+Authorization: Token c9c5c9196deaf62a991321b005593587e8d9400a
+Content-Type: application/json
+
+
+###
+GET http://127.0.0.1:8000/game/api/allmatches
+Authorization: Token c9c5c9196deaf62a991321b005593587e8d9400a
+Content-Type: application/json
+
+###
+GET http://127.0.0.1:8000/game/api/userMatches_History/yassin
+Authorization: Token c9c5c9196deaf62a991321b005593587e8d9400a
+Content-Type: application/json
+
+###
+POST http://127.0.0.1:8000/game/api/startTournement/
+Authorization: Token c9c5c9196deaf62a991321b005593587e8d9400a
+Content-Type: application/json
+
+{
+    "player1": "moskir",
+    "player2": "yassin",
+    "player3": "zizo",
+    "player4": "yassir"
+}
+
+###
+POST http://127.0.0.1:8000/game/api/second_match_Tournement/
+Authorization: Token c9c5c9196deaf62a991321b005593587e8d9400a
+Content-Type: application/json
+
+{
+    "won": "moskir",
+    "lose": "yassin"
+}
+
+###
+POST http://127.0.0.1:8000/game/api/match_final/
+Authorization: Token c9c5c9196deaf62a991321b005593587e8d9400a
+Content-Type: application/json
+
+{
+    "won": "zizo",
+    "lose": "yassir"
+}
+
+
+###
+POST http://127.0.0.1:8000/game/api/tournament_end/
+Authorization: Token c9c5c9196deaf62a991321b005593587e8d9400a
+Content-Type: application/json
+
+{
+    "won": "zizo",
+    "lose": "moskir"
+
+}
+
+###
+POST http://127.0.0.1:8000/game/api/Destroy_data/
+Authorization: Token c9c5c9196deaf62a991321b005593587e8d9400a
+Content-Type: application/json
+
+{}

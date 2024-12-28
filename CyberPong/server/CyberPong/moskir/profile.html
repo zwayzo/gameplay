@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Profile page - CyberPong</title>
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="profile.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Tomorrow&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<header id="for-blur">
+		<div class="header-area">
+			<div class="logo-container">
+				<img src="./pics/fontbolt1.png" alt="CyberPong Logo" class="logo">
+			</div>
+			<div class="search-container">
+				<input type="text" id="user-search" placeholder="Search for users..." class="search-bar"/>
+			</div>
+			<div class="menu-container">
+				<div class="red-color-area"></div>
+				<ul class="menu-buttons">
+				<button class="logOut" id="logOut" >LOG-OUT</button>
+					<li class="Language-list" id="Language-list">Language ▼
+						<ul class="dropdown">
+							<li><a href="#" data-lang="en">English</a></li>
+							<li><a href="#" data-lang="ar">Arabic</a></li>
+							<li><a href="#" data-lang="fr">French</a></li>
+						</ul>
+					</li>
+					<button id="home-button" class="home-button">HOME</button>
+					<button id="play-button-top" class="play-button-top" >Play</button >
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div class="profile-page">
+		<div class="profile-container">
+			<div class="left-panel">
+				<div class="profile-picture-container">
+					<img alt="Profile Picture" id="avatar">
+				</div>
+				<div class="profile-username" id="username" data-bs-placement="bottom" data-bs-toggle="tooltip">Loading...</div>
+				<div class="stats-container">
+					<h4 class="stats-title">Stats Overview</h4>
+					<ul class="user-stats">
+						<li><span class="key">Wins</span><span class="value" id="wins">N/A</span></li>
+						<li><span class="key">Loses</span><span class="value" id="loses">N/A</span></li>
+						<li><span class="key">Winrate</span><span class="value" id="winrate">N/A</span></li>
+						<li><span class="key">Win streak</span><span class="value" id="winstreak">N/A</span></li>
+						<li><span class="key">Tournaments won</span><span class="value" id="tournamentsWon">N/A</span></li>
+					</ul>
+					<div class="charts">
+						<div class="chart-container">
+							<canvas id="winRateChart"></canvas>
+							<p class="charts-p">Win Ratio</p>
+						</div>
+						<span class="charts-space"></span>
+						<div class="chart-container">
+							<canvas id="winLossChart"></canvas>
+							<p class="charts-p">Win/Loss</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="center-panel">
+				<h4 class="history-title">MATCH HISTORY</h4>
+				<div class="match-history" id="match-history">
+					<div id="loadingHistory" class="loading">Loading recent games...</div>
+					<p id="no-history">No recent games played</p>
+				</div>
+			</div>
+			
+			<div class="right-panel">
+				<h4 class="friends-title">Friends</h4>
+				<div class="friend-requests">
+					<button id="friend-requests-btn">
+						<i class="icon-user"></i> Friend Requests <span id="request-count">(10)</span>
+					</button>
+					<div class="friend-requests-dropdown hidden" id="friend-requests-dropdown">
+						<div class="request-card">
+							<div class="request-info">
+								<img src="./pics/ylarhris.jpeg" alt="Veridis" class="request-avatar">
+								<p id="request-username">Veridisssssssssssssssssssssssssss</p>
+							</div>
+							<div class="actions">
+								<button class="accept"><i class="fa fa-check"></i></button>
+								<button class="decline"><i class="fa fa-remove"></i></button>
+							</div>
+						</div>
+						<div class="request-card">
+							<div class="request-info">
+							<img src="./pics/mmokane.jpeg" alt="Moskir" class="request-avatar">
+							<p id="request-username">Moskir</p>
+							</div>
+							<div class="actions">
+								<button class="accept"><i class="fa fa-check"></i></button>
+								<button class="decline"><i class="fa fa-remove"></i></button>
+							</div>
+						</div>
+						<div class="request-card">
+							<div class="request-info">
+							<img src="./pics/mmokane.jpeg" alt="Moskir" class="request-avatar">
+							<p id="request-username">Moskir</p>
+							</div>
+							<div class="actions">
+								<button class="accept"><i class="fa fa-check"></i></button>
+								<button class="decline"><i class="fa fa-remove"></i></button>
+							</div>
+						</div>
+						<div class="request-card">
+							<div class="request-info">
+							<img src="./pics/mmokane.jpeg" alt="Moskir" class="request-avatar">
+							<p id="request-username">Moskir</p>
+							</div>
+							<div class="actions">
+								<button class="accept"><i class="fa fa-check"></i></button>
+								<button class="decline"><i class="fa fa-remove"></i></button>
+							</div>
+						</div>
+						<div class="request-card">
+							<div class="request-info">
+							<img src="./pics/mmokane.jpeg" alt="Moskir" class="request-avatar">
+							<p id="request-username">Moskir</p>
+							</div>
+							<div class="actions">
+								<button class="accept"><i class="fa fa-check"></i></button>
+								<button class="decline"><i class="fa fa-remove"></i></button>
+							</div>
+						</div>
+						<div class="request-card">
+							<div class="request-info">
+							<img src="./pics/mmokane.jpeg" alt="Moskir" class="request-avatar">
+							<p id="request-username">Moskir</p>
+							</div>
+							<div class="actions">
+								<button class="accept"><i class="fa fa-check"></i></button>
+								<button class="decline"><i class="fa fa-remove"></i></button>
+							</div>
+						</div>
+						<div class="request-card">
+							<div class="request-info">
+							<img src="./pics/mmokane.jpeg" alt="Moskir" class="request-avatar">
+							<p id="request-username">Moskir</p>
+							</div>
+							<div class="actions">
+								<button class="accept"><i class="fa fa-check"></i></button>
+								<button class="decline"><i class="fa fa-remove"></i></button>
+							</div>
+						</div>
+						<div class="request-card">
+							<div class="request-info">
+							<img src="./pics/mmokane.jpeg" alt="Moskir" class="request-avatar">
+							<p id="request-username">Moskir</p>
+							</div>
+							<div class="actions">
+								<button class="accept"><i class="fa fa-check"></i></button>
+								<button class="decline"><i class="fa fa-remove"></i></button>
+							</div>
+						</div>
+						<div class="request-card">
+							<div class="request-info">
+							<img src="./pics/mmokane.jpeg" alt="Moskir" class="request-avatar">
+							<p id="request-username">Moskir</p>
+							</div>
+							<div class="actions">
+								<button class="accept"><i class="fa fa-check"></i></button>
+								<button class="decline"><i class="fa fa-remove"></i></button>
+							</div>
+						</div>
+						<div class="request-card">
+							<div class="request-info">
+							<img src="./pics/mmokane.jpeg" alt="Moskir" class="request-avatar">
+							<p id="request-username">Moskir</p>
+							</div>
+							<div class="actions">
+								<button class="accept"><i class="fa fa-check"></i></button>
+								<button class="decline"><i class="fa fa-remove"></i></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="friends-list" id="friends-list">
+					<div id="loadingFriends" class="loading">Loading friends...</div>
+					<p id="no-friends">No friends were found</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="script.js"></script>
+	<script src="profile.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>

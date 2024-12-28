@@ -1,0 +1,13 @@
+<h1>{{ tournament.name }} - Details</h1>
+<h2>Players</h2>
+<ul>
+{% for player in players %}
+    <li>{{ player.first_name }} {{ player.last_name }}</li>
+{% endfor %}
+</ul>
+<h2>Matches</h2>
+<ul>
+{% for match in matches %}
+    <li>{{ match.player_1 }} vs {{ match.player_2 }} - Score: {{ match.score_player_1 }} - {{ match.score_player_2 }}</li>
+{% endfor %}
+</ul>

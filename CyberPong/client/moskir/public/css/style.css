@@ -1,0 +1,43 @@
+/* body{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	overflow: hidden;
+	backdrop-filter: blur(20px);
+} */
+
+.h1canva {
+	color: white;
+	font-size: 3rem;
+}
+
+.game-body {
+	border: 2px solid green;
+}
+
+/* .game-area{
+	display: flex;
+	border: 2px solid pink;
+	width: 600px;
+	height: 1000px;
+} */
+
+.game-area {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+    width: 900px;
+    height: 560px; /* Full viewport height */
+    overflow: hidden;
+	border: 2px solid pink;
+	backdrop-filter: blur(0);
+}
+
+/* Ensure the canvas takes the full size of the parent div */
+#game-canva {
+    /* display: block; Remove any default inline spacing */
+    width: 100%;
+    height: 100%;
+}

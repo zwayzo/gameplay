@@ -1,0 +1,35 @@
+{
+    "user": {
+        "id": 1,
+        "username": "Moskirrrrrrrrrrrrrrrrr",
+        "avatar": "./pics/mmokane.jpeg",
+        "wins": "56",
+        "loses": "12",
+        "winrate": "82.4",
+        "winstreak": 2,
+        "tournamentsWon": 1
+    },
+    "friends": [
+        { "id": 1, "name": "wwwwww", "avatar": "./pics/ylarhris.jpeg", "status": "online" },
+        { "id": 1, "name": "iiiiiiiiiiiiiiiiiiiiii", "avatar": "./pics/ylarhris.jpeg", "status": "online" },
+        { "id": 1, "name": "Veridis", "avatar": "./pics/ylarhris.jpeg", "status": "online" },
+        { "id": 1, "name": "Veridis", "avatar": "./pics/ylarhris.jpeg", "status": "online" },
+        { "id": 1, "name": "Veridis", "avatar": "./pics/ylarhris.jpeg", "status": "online" },
+        { "id": 1, "name": "Veridis", "avatar": "./pics/ylarhris.jpeg", "status": "online" },
+        { "id": 1, "name": "Veridis", "avatar": "./pics/ylarhris.jpeg", "status": "online" },
+        { "id": 1, "name": "Veridis", "avatar": "./pics/ylarhris.jpeg", "status": "online" },
+        { "id": 1, "name": "Veridis", "avatar": "./pics/ylarhris.jpeg", "status": "online" },
+        { "id": 1, "name": "Veridis", "avatar": "./pics/ylarhris.jpeg", "status": "online" },
+        { "id": 1, "name": "Veridis", "avatar": "./pics/ylarhris.jpeg", "status": "online" },
+        { "id": 1, "name": "Veridis", "avatar": "./pics/ylarhris.jpeg", "status": "online" },
+        { "id": 2, "name": "Moskir", "avatar": "./pics/mmokane.jpeg", "status": "offline" }
+    ],
+    "history": [
+        { "id": 1, "opponentUsername": "Veridisssssssssssssssssssss", "opponentAvatar": "./pics/ylarhris.jpeg", "result": "win", "score": 150, "date": "12/08/2024" },
+        { "id": 2, "opponentUsername": "wwwwwwww", "opponentAvatar": "./pics/mmokane.jpeg", "result": "loss", "score": 100, "date": "11/08/2024" },
+        { "id": 1, "opponentUsername": "iiiiiiiiiiiiiiiiiiiiiiiii", "opponentAvatar": "./pics/ylarhris.jpeg", "result": "win", "score": 150, "date": "12/08/2024" },
+        { "id": 2, "opponentUsername": "Moskir", "opponentAvatar": "./pics/mmokane.jpeg", "result": "loss", "score": 100, "date": "11/08/2024" },
+        { "id": 1, "opponentUsername": "Veridis", "opponentAvatar": "./pics/ylarhris.jpeg", "result": "win", "score": 150, "date": "12/08/2024" },
+        { "id": 2, "opponentUsername": "Moskir", "opponentAvatar": "./pics/mmokane.jpeg", "result": "loss", "score": 100, "date": "11/08/2024" }
+    ]
+}

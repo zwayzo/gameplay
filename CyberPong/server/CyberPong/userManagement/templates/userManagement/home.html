@@ -1,0 +1,290 @@
+ {% load static %}
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CyberPong</title>
+	<link rel="stylesheet" href="{% static 'css/index.css' %}">
+	<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+	<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Tomorrow&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+<body>
+	<div id="app"></div>
+		<!-- <header id="for-blur">
+		<div class="header-area">
+			<div class="logo-container">
+				<img src="./pics/fontbolt1.png" alt="CyberPong Logo" class="logo">
+			</div>
+			<div class="menu-container">
+				<div class="red-color-area"></div>
+				<ul class="menu-buttons">
+					<li class="find-us-list" id="find-us-list">Find Us On ▼
+                        <ul class="find-us-dropdown" id="find-us-dropdown">
+                            <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                            <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+                            <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+                        </ul>
+                    </li>
+					<li class="Language-list" id="Language-list">Language ▼
+						<ul class="dropdown">
+							<li><a href="#" data-lang="en">English</a></li>
+							<li><a href="#" data-lang="ar">Arabic</a></li>
+							<li><a href="#" data-lang="fr">French</a></li>
+						</ul>
+					</li>
+					<li class="signIn" id="signIn" >Sign-In</li >
+					<button id="play-button-top" class="play-button-top" >Play</button >
+				</ul>
+			</div>
+		</div>
+	</header>
+	<section id="section">
+		<div class="login-box" id="login-box">
+			<div class="tab-head ">
+				<div class="login-title active">
+					<h2>Log-in</h2> 
+				</div> 
+				<div class="signup-title ">
+					<h2>Sign-up</h2>
+				</div>
+			</div>
+			<div class="tab-main" id="tab-main">
+				<div class="tab-body login active"> 
+					<h5>Enter your credentials</h5>
+					<form class="tab-main-form">
+						<input class="text-input" type="email" name="email" placeholder="Enter your email"><br>
+						<input class="text-input" type="password" name="password" placeholder="Enter your password"><br>
+						<div class="signup-buttons">
+							<button class="intra-sign-up">Login</button>
+							<button class="intra-sign-up long-text">Sign with intra42</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="signup-body" id="signup-body"> 
+				 <h5>Enter your details to sign up</h5>
+				<form class="signup-form">
+					<label for="email"></label><br>
+					<input class="text-input" type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+					
+					<label for="password"></label><br>
+					<input class="text-input" type="password" id="password" name="password" placeholder="Enter your password"><br><br>
+					
+					<label for="retype-password"></label><br>
+					<input class="text-input" type="password" id="retype-password" name="retype-password" placeholder="Retype your password"><br>
+					<button>Sign-up</button>
+				</form>
+			</div>
+		</div>
+	<div class="find-us-area" id="find-us-area">
+		<ul>
+			<li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+			<li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+			<li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+		</ul>
+	</div>
+	</section> -->
+	<!-- <main id="main-content">
+		<div class="images-show-container" id="images-show-container">
+			<div id="carouselExampleCaptions" class="carousel slide">
+				<div class="carousel-indicators">
+				  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				</div>
+				<div class="carousel-inner">
+				  <div class="carousel-item active c-item">
+					<img src="./pics/3313953.jpg" class="d-block w-100 c-img" alt="...">
+					<div class="carousel-caption d-none d-md-block alo">
+					  <h1>Explore New Realms</h1>
+					  <h2>With the different maps and skins, be sure to enjoy it ALL </h2>
+					</div>
+				  </div>
+				  <div class="carousel-item c-item">
+					<img src="./pics/arcade2.png" class="d-block w-100 c-img" alt="...">
+					<div class="carousel-caption d-none d-md-block alo">
+					  <h1>Second slide label</h1>
+					  <p>Some representative placeholder content for the second slide.</p>
+					</div>
+				  </div>
+				  <div class="carousel-item c-item">
+					<img src="./pics/backzz.jpg" class="d-block w-100 c-img" alt="...">
+					<div class="carousel-caption d-none d-md-block alo">
+					  <h1>Third slide label</h1>
+					  <p>Some representative placeholder content for the third slide.</p>
+					</div>
+				  </div>
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+				  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				  <span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+				  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				  <span class="visually-hidden">Next</span>
+				</button>
+			  </div>
+		</div>
+		<div class="hero-section" id="hero-section">
+			<div class="hero-area-1">
+					<p id="hero-p">Become the greatest pong player, and rule 
+					your world using neon power!!!</p>
+			</div>
+			<div class="hero-area-2">
+				<p id="hero-p2">Ready to serve up some digital domination? 
+					Our new online pong game is here! </p>
+				<div class="play-area">
+					<button id="play-button-bot" class="play-button">Play</button>
+				</div>
+			</div>
+		</div>
+	</main> -->
+	<!-- <script src="app.js"></script> -->
+</body>
+	<script src="{% static 'js/app.js' %}"></script>
+	<script src="{% static 'particles.js-master/particles.js' %}"></script>	
+	<!-- <script src="app.js"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+	integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+	crossorigin="anonymous"></script>
+</html>
+
+
+ 
+ {% comment %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CyberPong</title>
+	<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Tomorrow&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+<body>
+	<header id="for-blur">
+		<div class="header-area">
+			<div class="logo-container">
+				<img src="{% static 'pics/fontbolt1.png' %}" alt="CyberPong Logo" class="logo">
+			</div>
+			<div class="menu-container">
+				<div class="red-color-area"></div>
+				<ul class="menu-buttons">
+					<button class="find-us-button" id="find-us-button">Find Us On</button >
+					<a href="{% url 'MyProfile' %}" class="find-us-button" id="find-us-button">profile</a >
+					<li class="Language-list" id="Language-list">Language ▼
+						<ul class="dropdown">
+							<li><a href="#" data-lang="en">English</a></li>
+							<li><a href="#" data-lang="ar">Arabic</a></li>
+							<li><a href="#" data-lang="fr">French</a></li>
+						</ul>
+					</li>
+					<li class="signIn" id="signIn" >Sign-In</li >
+					<button id="play-button-top" class="play-button-top" >Play</button >
+				</ul>
+			</div>
+		</div>
+	</header>
+	<section id="section">
+	<div class="login-popup" id="login-popup">
+	<div class="login-box">
+		<form id="login-form" method="post" action="">
+			{% csrf_token %}
+			<button id="close-popup" class="close-popup">x</button>
+			<h2>Login</h2>
+			<div class="input-box">
+				<input type="text" id="username" name="username" autocomplete="off">
+				<label>Username</label>
+			</div>
+			<div class="input-box">
+				<input type="password" id="password" name="password" autocomplete="off">
+				<label>Password</label>
+			</div>
+			<p class="wrong-input-err" id="wrong-input-err">Incorrect username or password, try again please!</p>
+			<button class="submit-button" id="submit-button" type="submit">Login</button>
+
+		</form>
+	</div>
+	</div>
+	<div class="find-us-area" id="find-us-area">
+		<ul>
+			<li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+			<li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+			<li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+		</ul>
+	</div>
+	</section>
+	<main id="main-content">
+		<div class="images-show-container" id="images-show-container">
+			<div id="carouselExampleCaptions" class="carousel slide">
+				<div class="carousel-indicators">
+				  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				</div>
+				<div class="carousel-inner">
+				  <div class="carousel-item active c-item">
+					<img src=" {% static 'pics/3313953.jpg' %}" class="d-block w-100 c-img" alt="...">
+					<div class="carousel-caption d-none d-md-block alo">
+					  <h1>Explore New Realms</h1>
+					  <h2>With the different maps and skins, be sure to enjoy it ALL </h2>
+					</div>
+				  </div>
+				  <div class="carousel-item c-item">
+					<img src="{% static 'pics/arcade2.png' %}" class="d-block w-100 c-img" alt="...">
+					<div class="carousel-caption d-none d-md-block alo">
+					  <h1>Second slide label</h1>
+					  <p>Some representative placeholder content for the second slide.</p>
+					</div>
+				  </div>
+				  <div class="carousel-item c-item">
+					<img src="{% static 'pics/backzz.jpg' %}" class="d-block w-100 c-img" alt="...">
+					<div class="carousel-caption d-none d-md-block alo">
+					  <h1>Third slide label</h1>
+					  <p>Some representative placeholder content for the third slide.</p>
+					</div>
+				  </div>
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+				  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				  <span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+				  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				  <span class="visually-hidden">Next</span>
+				</button>
+			  </div>
+		</div>
+		<div class="hero-section" id="hero-section">
+			<div class="hero-area-1">
+					<p id="hero-p">Become the greatest pong player, and rule 
+					your world using neon power!!!</p>
+			</div>
+			<div class="hero-area-2">
+				<p id="hero-p2">Ready to serve up some digital domination? 
+					Our new online pong game is here! </p>
+				<div class="play-area">
+					<button id="play-button-bot" class="play-button">Play</button>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+<script src="{% static 'particles.js-master/particles.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</html>
+ {% endcomment %}
